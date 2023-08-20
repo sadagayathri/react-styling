@@ -38,13 +38,18 @@ function App() {
    <tbody>
     {
        students.map((a)=>{
-           return  <tr><td>{a.firstname}</td><td>{a.lastname}</td><td>{a.gender}</td></tr>
+           return  (<tr style={(a.gender==='male')?{backgroundColor:'lightblue'}:{backgroundColor:'pink'}}>
+            <td>{a.firstname}</td>
+            <td>{a.lastname}</td>
+            <td>{a.gender}</td>
+            </tr>)
         
      })
     }
     
    </tbody>
 </table>
+
     </>
   )
 }
