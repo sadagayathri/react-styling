@@ -1,13 +1,24 @@
 
 import './App.css'
+import React, { useState } from 'react';
 
 function App() {
-  
-
+  const [todos,setTodos]=React.useState(['hometown','nellore','gayathri'])
+function td(){
+   const x =(document.getElementById("d1") as HTMLInputElement) .value;
+   setTodos([...todos,x])
+}
   return (
     <>
-      <h1>welcome</h1>
-      
+     <input type='text' id="d1"></input>
+     <button onClick={td}>Add Todo</button>
+      <ul>
+        {
+          todos.map((a)=>{
+            return <li>{a}</li>
+          })
+        }
+      </ul>
     </>
   )
 }
