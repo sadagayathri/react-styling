@@ -1,4 +1,5 @@
 
+import React, { useState } from 'react';
 import './App.css'
 
 function App() {
@@ -24,7 +25,15 @@ function App() {
       'gender':'male'
     }
   ];
-  
+ const [count,setcount]=React.useState(1)
+ //const [todo,settodo]=React.useState(['hometown','nellore','gayathri'])
+
+function pqr(){
+  setcount(count+1)
+}
+function abc(){
+  setcount(count-1)
+}
 
   return (
     <>
@@ -49,6 +58,13 @@ function App() {
     
    </tbody>
 </table>
+<h1>{count}</h1>
+<button onClick={pqr}>Increment</button>
+<button onClick={abc}>Decrement</button><br>
+</br>
+<br></br>
+<input type='text' id="d1"></input>
+<button onClick={td}>Add Todo</button>
 
     </>
   )
