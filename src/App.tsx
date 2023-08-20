@@ -34,9 +34,7 @@ function pqr(){
 function abc(){
   setcount(count-1)
 }
-function td(){
-  
-}
+
 
   return (
     <>
@@ -66,8 +64,7 @@ function td(){
 <button onClick={abc}>Decrement</button><br>
 </br>
 <br></br>
-<input type='text' id="d1"></input>
-<button onClick={td}>Add Todo</button>
+
 
     </>
   )
